@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Type and Variable Quiz</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212; /* Dark Theme Background */
+      color: #ffffff; /* White text for contrast */
+      
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full Screen */
+      flex-direction: column;
+    }
+
+    h1 {
+      color: #00d1ff; /* Header text color */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .quiz-container {
+      width: 80%;
+      background-color: #1e1e1e; /* Slightly lighter background for the quiz container */
+      padding: 80px;
+      margin-left: 5%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: to add some depth */
+    }
+
+    .question {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .options {
+      margin-bottom: 10px;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 5px;
+      padding: 10px;
+      background: #333333; /* Darker option background */
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .options input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .score {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+      color: #00ff00; /* Score in green */
+    }
+  </style>
+</head>
+<body>
+  <h1>Data Type and Variable</h1>
+  <div class="quiz-container">
+    <form id="quiz-form">
+      <!-- Add Here .. -->
+             <!-- Question 1 -->
+      <div class="question">প্রশ্ন ১: কোন অপারেটরটি গাণিতিক কাজের জন্য ব্যবহৃত হয়?</div>
+      <div class="options">
+        <label><input type="radio" name="q1" value="==" onclick="checkAnswer(this, '+')">a) ==</label>
+        <label><input type="radio" name="q1" value="+" onclick="checkAnswer(this, '+')">b) +</label>
+        <label><input type="radio" name="q1" value="&&" onclick="checkAnswer(this, '+')">c) &&</label>
+        <label><input type="radio" name="q1" value="!=" onclick="checkAnswer(this, '+')">d) !=</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question">প্রশ্ন ২: a > b অপারেটরটি কী ধরনের অপারেটর?</div>
+      <div class="options">
+        <label><input type="radio" name="q2" value="গাণিতিক অপারেটর" onclick="checkAnswer(this, 'তুলনা অপারেটর')">a) গাণিতিক অপারেটর</label>
+        <label><input type="radio" name="q2" value="তুলনা অপারেটর" onclick="checkAnswer(this, 'তুলনা অপারেটর')">b) তুলনা অপারেটর</label>
+        <label><input type="radio" name="q2" value="লজিক্যাল অপারেটর" onclick="checkAnswer(this, 'তুলনা অপারেটর')">c) লজিক্যাল অপারেটর</label>
+        <label><input type="radio" name="q2" value="অ্যাসাইনমেন্ট অপারেটর" onclick="checkAnswer(this, 'তুলনা অপারেটর')">d) অ্যাসাইনমেন্ট অপারেটর</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question">প্রশ্ন ৩: কোন অপারেটরটি একটি সংখ্যাকে ১ বৃদ্ধি করে?</div>
+      <div class="options">
+        <label><input type="radio" name="q3" value="--" onclick="checkAnswer(this, '++')">a) --</label>
+        <label><input type="radio" name="q3" value="++" onclick="checkAnswer(this, '++')">b) ++</label>
+        <label><input type="radio" name="q3" value="-" onclick="checkAnswer(this, '++')">c) -</label>
+        <label><input type="radio" name="q3" value="+" onclick="checkAnswer(this, '++')">d) +</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question">প্রশ্ন ৪: a && b কীভাবে কাজ করে?</div>
+      <div class="options">
+        <label><input type="radio" name="q4" value="যখন a এবং b উভয়ই সত্য হবে, তখন ফলাফল হবে সত্য" onclick="checkAnswer(this, 'যখন a এবং b উভয়ই সত্য হবে, তখন ফলাফল হবে সত্য')">a) যখন a এবং b উভয়ই সত্য হবে, তখন ফলাফল হবে সত্য</label>
+        <label><input type="radio" name="q4" value="যখন a অথবা b একটিও সত্য হবে, তখন ফলাফল হবে সত্য" onclick="checkAnswer(this, 'যখন a এবং b উভয়ই সত্য হবে, তখন ফলাফল হবে সত্য')">b) যখন a অথবা b একটিও সত্য হবে, তখন ফলাফল হবে সত্য</label>
+        <label><input type="radio" name="q4" value="যদি a অথবা b কোনটি সত্য না হয়, তখন ফলাফল হবে সত্য" onclick="checkAnswer(this, 'যখন a এবং b উভয়ই সত্য হবে, তখন ফলাফল হবে সত্য')">c) যদি a অথবা b কোনটি সত্য না হয়, তখন ফলাফল হবে সত্য</label>
+        <label><input type="radio" name="q4" value="কোনোটিই নয়" onclick="checkAnswer(this, 'যখন a এবং b উভয়ই সত্য হবে, তখন ফলাফল হবে সত্য')">d) কোনোটিই নয়</label>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="question">প্রশ্ন ৫: নিচের কোনটি অ্যাসাইনমেন্ট অপারেটর?</div>
+      <div class="options">
+        <label><input type="radio" name="q5" value="=" onclick="checkAnswer(this, '=')">a) =</label>
+        <label><input type="radio" name="q5" value="==" onclick="checkAnswer(this, '=')">b) ==</label>
+        <label><input type="radio" name="q5" value="&&" onclick="checkAnswer(this, '=')">c) &&</label>
+        <label><input type="radio" name="q5" value="!=" onclick="checkAnswer(this, '=')">d) !=</label>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="question">প্রশ্ন ৬: a != b অপারেটরটি কী কাজ করে?</div>
+      <div class="options">
+        <label><input type="radio" name="q6" value="a এবং b এর সমান হওয়া চেক করে" onclick="checkAnswer(this, 'a এবং b এর সমান না হওয়া চেক করে')">a) a এবং b এর সমান হওয়া চেক করে</label>
+        <label><input type="radio" name="q6" value="a এবং b এর সমান না হওয়া চেক করে" onclick="checkAnswer(this, 'a এবং b এর সমান না হওয়া চেক করে')">b) a এবং b এর সমান না হওয়া চেক করে</label>
+        <label><input type="radio" name="q6" value="a এবং b এর যোগফল চেক করে" onclick="checkAnswer(this, 'a এবং b এর সমান না হওয়া চেক করে')">c) a এবং b এর যোগফল চেক করে</label>
+        <label><input type="radio" name="q6" value="a এবং b এর গুণফল চেক করে" onclick="checkAnswer(this, 'a এবং b এর সমান না হওয়া চেক করে')">d) a এবং b এর গুণফল চেক করে</label>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="question">প্রশ্ন ৭: নিচের কোন অপারেটরটি গুণফল করার জন্য ব্যবহৃত হয়?</div>
+      <div class="options">
+        <label><input type="radio" name="q7" value="+" onclick="checkAnswer(this, '*')">a) +</label>
+        <label><input type="radio" name="q7" value="-" onclick="checkAnswer(this, '*')">b) -</label>
+        <label><input type="radio" name="q7" value="*" onclick="checkAnswer(this, '*')">c) *</label>
+        <label><input type="radio" name="q7" value="/" onclick="checkAnswer(this, '*')">d) /</label>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="question">প্রশ্ন ৮: কোনটি ভেরিয়েবলের উদাহরণ?</div>
+      <div class="options">
+        <label><input type="radio" name="q8" value="x = 5" onclick="checkAnswer(this, 'x = 5')">a) x = 5</label>
+        <label><input type="radio" name="q8" value="x + 5" onclick="checkAnswer(this, 'x = 5')">b) x + 5</label>
+        <label><input type="radio" name="q8" value="x > 5" onclick="checkAnswer(this, 'x = 5')">c) x > 5</label>
+        <label><input type="radio" name="q8" value="x == 5" onclick="checkAnswer(this, 'x = 5')">d) x == 5</label>
+      </div>
+      <!-- Question 9 -->
+
+<div class="question">প্রশ্ন ৯: নিচের কোনটি বিটওয়াইজ অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q9" value="&" onclick="checkAnswer(this, '&')">a) &</label>
+  <label><input type="radio" name="q9" value="|" onclick="checkAnswer(this, '&')">b) |</label>
+  <label><input type="radio" name="q9" value="^" onclick="checkAnswer(this, '&')">c) ^</label>
+  <label><input type="radio" name="q9" value="&&" onclick="checkAnswer(this, '&')">d) &&</label>
+</div>
+<!-- Question 10 -->
+<div class="question">প্রশ্ন ১০: নিচের কোনটি অ্যাসাইনমেন্ট অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q10" value="=" onclick="checkAnswer(this, '=')">a) =</label>
+  <label><input type="radio" name="q10" value="==" onclick="checkAnswer(this, '=')">b) ==</label>
+  <label><input type="radio" name="q10" value="&&" onclick="checkAnswer(this, '=')">c) &&</label>
+  <label><input type="radio" name="q10" value="!=" onclick="checkAnswer(this, '=')">d) !=</label>
+</div>
+<!-- Question 11 -->
+<div class="question">প্রশ্ন ১১: নিচের কোনটি গাণিতিক অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q11" value="+" onclick="checkAnswer(this, '+')">a) +</label>
+  <label><input type="radio" name="q11" value="*" onclick="checkAnswer(this, '+')">b) *</label>
+  <label><input type="radio" name="q11" value="%" onclick="checkAnswer(this, '+')">c) %</label>
+  <label><input type="radio" name="q11" value="-" onclick="checkAnswer(this, '+')">d) -</label>
+</div>
+<!-- Question 12 -->
+<div class="question">প্রশ্ন ১২: নিচের কোনটি ইনক্রিমেন্ট অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q12" value="++" onclick="checkAnswer(this, '++')">a) ++</label>
+  <label><input type="radio" name="q12" value="--" onclick="checkAnswer(this, '++')">b) --</label>
+  <label><input type="radio" name="q12" value="=" onclick="checkAnswer(this, '++')">c) =</label>
+  <label><input type="radio" name="q12" value="!=" onclick="checkAnswer(this, '++')">d) !=</label>
+</div>
+<!-- Question 13 -->
+<div class="question">প্রশ্ন ১৩: নিচের কোনটি বিট শিফট অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q13" value="<<" onclick="checkAnswer(this, '<<')">a) <<</label>
+  <label><input type="radio" name="q13" value=">>" onclick="checkAnswer(this, '<<')">b) >></label>
+  <label><input type="radio" name="q13" value="&" onclick="checkAnswer(this, '<<')">c) &</label>
+  <label><input type="radio" name="q13" value="^" onclick="checkAnswer(this, '<<')">d) ^</label>
+</div>
+
+<!-- Question 14 -->
+<div class="question">প্রশ্ন ১৪: নিচের কোনটি লজিক্যাল NOT অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q14" value="!" onclick="checkAnswer(this, '!')">a) !</label>
+  <label><input type="radio" name="q14" value="~" onclick="checkAnswer(this, '!')">b) ~</label>
+  <label><input type="radio" name="q14" value="^" onclick="checkAnswer(this, '!')">c) ^</label>
+  <label><input type="radio" name="q14" value="&&" onclick="checkAnswer(this, '!')">d) &&</label>
+</div>
+
+<!-- Question 15 -->
+<div class="question">প্রশ্ন ১৫: নিচের কোনটি সমানতা চেক করার অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q15" value="==" onclick="checkAnswer(this, '==')">a) ==</label>
+  <label><input type="radio" name="q15" value="=" onclick="checkAnswer(this, '==')">b) =</label>
+  <label><input type="radio" name="q15" value="!=" onclick="checkAnswer(this, '==')">c) !=</label>
+  <label><input type="radio" name="q15" value="<" onclick="checkAnswer(this, '==')">d) <</label>
+</div>
+
+<!-- Question 16 -->
+<div class="question">প্রশ্ন ১৬: নিচের কোনটি শর্ত সাপেক্ষ অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q16" value="?" onclick="checkAnswer(this, '?')">a) ?</label>
+  <label><input type="radio" name="q16" value=":" onclick="checkAnswer(this, '?')">b) :</label>
+  <label><input type="radio" name="q16" value="&&" onclick="checkAnswer(this, '?')">c) &&</label>
+  <label><input type="radio" name="q16" value="||" onclick="checkAnswer(this, '?')">d) ||</label>
+</div>
+
+<!-- Question 17 -->
+<div class="question">প্রশ্ন ১৭: নিচের কোনটি বিটওয়াইজ XOR অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q17" value="^" onclick="checkAnswer(this, '^')">a) ^</label>
+  <label><input type="radio" name="q17" value="&" onclick="checkAnswer(this, '^')">b) &</label>
+  <label><input type="radio" name="q17" value="|" onclick="checkAnswer(this, '^')">c) |</label>
+  <label><input type="radio" name="q17" value="~" onclick="checkAnswer(this, '^')">d) ~</label>
+</div>
+
+<!-- Question 18 -->
+<div class="question">প্রশ্ন ১৮: নিচের কোনটি গাণিতিক মডুলাস অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q18" value="%" onclick="checkAnswer(this, '%')">a) %</label>
+  <label><input type="radio" name="q18" value="&" onclick="checkAnswer(this, '%')">b) &</label>
+  <label><input type="radio" name="q18" value="+" onclick="checkAnswer(this, '%')">c) +</label>
+  <label><input type="radio" name="q18" value="-" onclick="checkAnswer(this, '%')">d) -</label>
+</div>
+
+<!-- Question 19 -->
+<div class="question">প্রশ্ন ১৯: নিচের কোনটি স্ট্রিং সংযোজন অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q19" value="+" onclick="checkAnswer(this, '+')">a) +</label>
+  <label><input type="radio" name="q19" value="-" onclick="checkAnswer(this, '+')">b) -</label>
+  <label><input type="radio" name="q19" value="*" onclick="checkAnswer(this, '+')">c) *</label>
+  <label><input type="radio" name="q19" value="/" onclick="checkAnswer(this, '+')">d) /</label>
+</div>
+
+<!-- Question 20 -->
+<div class="question">প্রশ্ন ২০: নিচের কোনটি যুক্তি শর্তের জন্য উপযুক্ত অপারেটর?</div>
+<div class="options">
+  <label><input type="radio" name="q20" value="&&" onclick="checkAnswer(this, '&&')">a) &&</label>
+  <label><input type="radio" name="q20" value="||" onclick="checkAnswer(this, '&&')">b) ||</label>
+  <label><input type="radio" name="q20" value="=" onclick="checkAnswer(this, '&&')">c) =</label>
+  <label><input type="radio" name="q20" value="==" onclick="checkAnswer(this, '&&')">d) ==</label>
+</div>
+
+
+
+
+</div>
+
+
+    </form>
+
+    <div class="score" id="score-container"></div> <!-- Score Display -->
+  </div>
+  
+
+  <script>
+    let score = 0; // To keep track of the score
+    let totalQuestions = 20; // Update this value if you add more questions
+    let answeredQuestions = 0; // To keep track of how many questions have been answered
+
+    function checkAnswer(option, correctAnswer) {
+      const parentLabel = option.parentElement;
+
+      // Disable all options for this question
+      const allOptions = parentLabel.parentElement.querySelectorAll("input");
+      allOptions.forEach(input => {
+        input.disabled = true; // Prevent further clicking
+      });
+
+      // Reset the background color of all options before applying new colors
+      const allLabels = parentLabel.parentElement.querySelectorAll("label");
+      allLabels.forEach(label => {
+        label.style.backgroundColor = ''; // Reset color
+      });
+
+      // Color the options based on the answer
+      if (option.value === correctAnswer) {
+        parentLabel.style.backgroundColor = 'cyan'; // Correct answer
+        score++;
+      } else {
+        parentLabel.style.backgroundColor = 'red'; // Incorrect answer
+      }
+
+      // Increment the number of answered questions
+      answeredQuestions++;
+
+      // Show total score once all questions are answered
+     
+        const scoreContainer = document.getElementById("score-container");
+        scoreContainer.textContent = `Your Total Score: ${score} / ${totalQuestions}`;
+      
+    }
+  </script>
+</body>
+</html>

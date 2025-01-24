@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn C Programming in Bangla</title>
+  <!-- External Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- External CSS for custom styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Sidebar -->
+  <div class="sidebar fixed top-0 left-0 w-64 h-full bg-blue-800 text-white p-6 overflow-y-auto">
+    <h2 class="text-center text-2xl font-bold">Mastering C with <a href="#">Naeem</a></h2>
+    <a href="javascript:void(0);" onclick="showSection('dataType')" class="block py-2 hover:bg-blue-700">Data Types and Variables</a>
+    <a href="javascript:void(0);" onclick="showSection('operators')" class="block py-2 hover:bg-blue-700">Operators and Operands</a>
+    <a href="javascript:void(0);" onclick="showSection('inputOutput')" class="block py-2 hover:bg-blue-700">Input and Output</a>
+    <a href="javascript:void(0);" onclick="showSection('controlStatement')" class="block py-2 hover:bg-blue-700">Control Statements</a>
+    <a href="javascript:void(0);" onclick="showSection('function')" class="block py-2 hover:bg-blue-700">Functions</a>
+    <a href="javascript:void(0);" onclick="showSection('array')" class="block py-2 hover:bg-blue-700">Arrays</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content ml-64 p-8 flex-grow overflow-y-auto">
+    
+    <!-- Data Types and Variables Section -->
+    <section id="dataType" class="section hidden">
+  
+      <h2 class="text-2xl font-semibold text-blue-400 mb-4">Data Types and Variables</h2>
+    <p><strong>ডেটাটাইপ:</strong> ডেটাটাইপ হলো কোনো ভ্যারিয়েবলের ধারণ করা ডেটার প্রকার। এটি আমাদের বলে যে একটি ভ্যারিয়েবলে কিস ধরনের ডেটা রাখা হবে, যেমন পূর্ণসংখ্যা, দশমিক সংখ্যা, স্ট্রিং ইত্যাদি। </p> <br>
+    <p><strong>ভ্যারিয়েবল:</strong> ভ্যারিয়েবল হলো একটি নাম বা স্থান যেখানে কোনো নির্দিষ্ট ডেটা সংরক্ষিত থাকে। এটি আমাদের কোডের মধ্যে ডেটা ব্যবহারের জন্য একটি স্থান নির্ধারণ করে।</p><br>
+    <h2>প্রধান কিছু ডেটাটাইপ:</h2>
+    <ul>
+        <li><strong>ইন্টিজার (Integer)</strong>: পূর্ণসংখ্যা যেমন 5, -3, 100।</li>
+        <li><strong>ফ্লোট (Float)</strong>: দশমিক সংখ্যা যেমন 3.14, -0.5।</li>
+        <li><strong>স্ট্রিং (String)</strong>: অক্ষর, শব্দ বা বাক্য যেমন "Hello", "Bangla"।</li>
+        <li><strong>বুলিয়ান (Boolean)</strong>: সত্য বা মিথ্যা মান যেমন true, false।</li>
+    </ul>
+    <h2>ভ্যারিয়েবল উদাহরণ:</h2>
+    <pre>
+        <code>
+            int age = 25;  // ইন্টিজার টাইপ ভ্যারিয়েবল
+            float weight = 60.5;  // ফ্লোট টাইপ ভ্যারিয়েবল
+            string name = "John";  // স্ট্রিং টাইপ ভ্যারিয়েবল
+            bool isStudent = true;  // বুলিয়ান টাইপ ভ্যারিয়েবল
+        </code>
+    </pre>
+    <h2>নামকরণের কনভেনশন:</h2>
+    <p>ভ্যারিয়েবলের নাম অবশ্যই ইংরেজি অক্ষর (a-z, A-Z), সংখ্যা (0-9), অথবা আন্ডারস্কোর (_) থাকতে পারে।</p>
+    <p>ভ্যারিয়েবলের নাম অবশ্যই সংখ্যা দিয়ে শুরু করা যাবে না।</p>
+    <p>প্রতিটি শব্দের মধ্যে আন্ডারস্কোর (_) ব্যবহার করা হতে পারে, যেমন <code>my_variable</code>।</p>
+    <p>পাস্কাল কেস বা ক্যামেল কেস স্টাইল ব্যবহার করা যেতে পারে, যেমন <code>myVariable</code> বা <code>MyVariable</code>।</p>
+      
+      <!-- Practice Section for Data Types and Variables -->
+      <h3 class="text-xl font-medium text-blue-300 mt-4 mb-2">Practice</h3>
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_1')">Problem 1: Declare and Initialize Variables</div>
+      <div id="dataType_practice_1" class="content hidden bg-gray-800 p-4 rounded-md">
+       <img src="code/1.jpg" alt="Description of Image" width="70%" height="auto">
+      </div>
+
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_2')">Problem 2: Calculate the Sum, Difference, and Product of Two Numbers</div>
+      <div id="dataType_practice_2" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/2.jpg" alt="Description of Image" width="70%" height="auto">
+      </div>
+
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_3')">Problem 3: Division and Remainder</div>
+      <div id="dataType_practice_3" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/3.jpg" alt="Description of Image"  width="70%" height="auto">
+      </div>
+
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_4')">Problem 4: Calculate the Average of Two Numbers</div>
+      <div id="dataType_practice_4" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/4.jpg" alt="Description of Image" width="70%"height="auto">
+      </div>
+
+      
+      <a href="mcq.html" style="display: inline-block; text-align: center; padding: 12px 24px; font-size: 16px; text-decoration: none; background-color: #00d1ff; color: white; border-radius: 8px; transition: all 0.3s ease; font-weight: bold; margin-top: 20px;"
+      onmouseover="this.style.backgroundColor='#ff4d4d'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.2)';"
+      onmouseout="this.style.backgroundColor='#00d1ff'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+      MCQ
+    </a>
+    </section>
+    <!---- Operators -->
+    <section id="operators" class="section hidden">
+      <h2 class="text-2xl font-semibold text-blue-400 mb-4">Operator</h2>
+      <a href="https://www.youtube.com/watch?v=6y2TkyxlMcw&list=PLj4Xheg1fm_0U2B1ni-SIf_eJRbh57ct5" target="_blank" style="display: inline-block; text-align: center; padding: 12px 24px; font-size: 16px; text-decoration: none; background-color: #00d1ff; color: white; border-radius: 8px; transition: all 0.3s ease; font-weight: bold; margin-top: 20px;"
+      onmouseover="this.style.backgroundColor='#ff4d4d'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.2)';"
+      onmouseout="this.style.backgroundColor='#00d1ff'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+     Tutorial
+    </a> <br> <br>
+    <p><strong>Operators:</strong> C প্রোগ্রামিং ভাষায় অপারেটরগুলি মূলত ব্যবহার করা হয় ডেটার মান পরিবর্তন করার জন্য বা গাণিতিক, তুলনা, যৌথ বা লজিক্যাল কাজ সম্পাদন করার জন্য। এখানে আমরা C ভাষায় বিভিন্ন ধরনের অপারেটর এবং তাদের ব্যবহারের কিছু উদাহরণ আলোচনা করবো।
+
+      অপারেটরের প্রকারভেদ: <br>
+
+      
+      ১. আরিথমেটিক অপারেটর (Arithmetic Operators): <br> 
+      এগুলি গাণিতিক কাজ সম্পাদন করে। যেমন যোগ, বিয়োগ, গুণ, ভাগ ইত্যাদি</p>
+    
+    <pre>
+      <img src="code/Arithmetic.png" alt="Description of Image" width="500" height="auto">
+    </pre>
+    ২. তুলনা অপারেটর (Relational Operators): <br>
+এই অপারেটরগুলি দুইটি মান তুলনা করতে ব্যবহৃত হয় এবং ফলস্বরূপ একটি বুলিয়ান মান (সত্য/মিথ্যা) প্রদান করে।
+<pre>
+ 
+  <img src="code/relational.png" alt="Description of Image" width="500" height="auto">
+</pre>
+৪. অ্যাসাইনমেন্ট অপারেটর (Assignment Operators):
+এই অপারেটরগুলি একটি মান একটি ভেরিয়েবলে সংরক্ষণ করতে ব্যবহৃত হয়।
+
+<pre>
+ 
+  <img src="code/Assignment.png" alt="Description of Image" width="500" height="auto">
+</pre>
+ইনক্রিমেন্ট এবং ডিক্রিমেন্ট অপারেটর (Increment and Decrement Operators)
+এই অপারেটরগুলি একটি ভেরিয়েবলের মান বৃদ্ধি বা হ্রাস করতে ব্যবহৃত হয়।
+<pre>
+ 
+  <img src="code/increment.png" alt="Description of Image" width="500" height="auto">
+</pre>
+
+      
+      <a href="operatorMcq.html" style="display: inline-block; text-align: center; padding: 12px 24px; font-size: 16px; text-decoration: none; background-color: #00d1ff; color: white; border-radius: 8px; transition: all 0.3s ease; font-weight: bold; margin-top: 20px;"
+      onmouseover="this.style.backgroundColor='#ff4d4d'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.2)';"
+      onmouseout="this.style.backgroundColor='#00d1ff'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+      MCQ
+    </a>
+    </section>
+    
+
+     <!---  Input Output -->
+
+     <section id="inputOutput" class="section hidden">
+      <h2 class="text-2xl font-semibold text-blue-400 mb-4">Input and Output</h2>
+      <a href="https://www.youtube.com/watch?v=aqREb_FC_Xw" target="_blank" style="display: inline-block; text-align: center; padding: 12px 24px; font-size: 16px; text-decoration: none; background-color: #00d1ff; color: white; border-radius: 8px; transition: all 0.3s ease; font-weight: bold; margin-top: 20px;"
+      onmouseover="this.style.backgroundColor='#ff4d4d'; this.style.transform='scale(1.1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.2)';"
+      onmouseout="this.style.backgroundColor='#00d1ff'; this.style.transform='scale(1)'; this.style.boxShadow='none';">
+
+      Tutorial </a>
+     
+ 
+
+  
+      
+      <!-- Practice Section for Data Types and Variables -->
+      <h3 class="text-xl font-medium text-blue-300 mt-4 mb-2">Practice</h3>
+      <!--Problem 1 -->
+
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('inputOutput_1')">
+        
+        
+        <pre>Problem 1. দুই সংখ্যার যোগফল বের করুন
+          দুটি সংখ্যা ইনপুট নিয়ে তাদের যোগফল প্রিন্ট করুন।  </pre>
+      </div>
+      <div id="inputOutput_1" class="content hidden bg-gray-800 p-4 rounded-md">
+       <img src="code/p1.png" alt="Description of Image" width="500" height="auto">
+      </div>
+
+  <!--Problem 2 -->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('inputOutput_2')">Problem 2:২. আয়তক্ষেত্রের ক্ষেত্রফল বের করুন <br>লম্বা এবং প্রস্থ ইনপুট নিয়ে ক্ষেত্রফল প্রিন্ট করুন।</div>
+      <div id="inputOutput_2" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/p2.png" alt="Description of Image" width="500" height="auto">
+      </div>
+
+  <!--Problem 3-->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_3')">Problem 3: Division and Remainder</div>
+      <div id="dataType_practice_3" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/3.jpg" alt="Description of Image" width="500" height="auto">
+      </div>
+
+  <!--Problem 4 -->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_4')">Problem 4: Calculate the Average of Two Numbers</div>
+      <div id="dataType_practice_4" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/4.jpg" alt="Description of Image" width="500" height="auto">
+      </div>
+
+  <!--Problem 5 -->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_4')">Problem 4: Calculate the Average of Two Numbers</div>
+      <div id="dataType_practice_4" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/4.jpg" alt="Description of Image" width="500" height="auto">
+      </div>
+
+  <!--Problem 6 -->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_4')">Problem 4: Calculate the Average of Two Numbers</div>
+      <div id="dataType_practice_4" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/4.jpg" alt="Description of Image" width="500" height="auto">
+      </div>
+
+  <!--Problem 7 -->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_4')">Problem 4: Calculate the Average of Two Numbers</div>
+      <div id="dataType_practice_4" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/4.jpg" alt="Description of Image" width="500" height="auto">
+      </div>
+
+       <!--Problem 8 -->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_4')">Problem 4: Calculate the Average of Two Numbers</div>
+      <div id="dataType_practice_4" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/4.jpg" alt="Description of Image" width="500" height="auto">
+      </div>
+
+ <!--Problem 9 -->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_4')">Problem 4: Calculate the Average of Two Numbers</div>
+      <div id="dataType_practice_4" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/4.jpg" alt="Description of Image" width="500" height="auto">
+      </div>
+
+ <!--Problem 10-->
+      <div class="collapsible bg-gray-700 p-3 cursor-pointer rounded-md mb-4" onclick="toggleContent('dataType_practice_4')">Problem 4: Calculate the Average of Two Numbers</div>
+      <div id="dataType_practice_4" class="content hidden bg-gray-800 p-4 rounded-md">
+        <img src="code/4.jpg" alt="Description of Image" width="500" height="auto">
+      </div>
+
+    </section>
+  
+  </div>
+
+  <script>
+    // Function to show and hide sections
+    function showSection(id) {
+      var sections = document.querySelectorAll('.section');
+      sections.forEach(function(section) {
+        section.classList.add('hidden');
+      });
+
+      var section = document.getElementById(id);
+      section.classList.remove('hidden');
+    }
+
+    // Function to toggle collapsible content
+    function toggleContent(id) {
+      var content = document.getElementById(id);
+      content.classList.toggle('hidden');
+    }
+
+
+    // Show the intro section initially
+  
+  </script>
+
+</body>
+</html>
