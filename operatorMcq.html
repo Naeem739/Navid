@@ -67,6 +67,9 @@
 <body>
   <h1>Data Type and Variable</h1>
   <div class="quiz-container">
+    <button onclick="window.history.back()" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">
+      Back
+    </button>
     <form id="quiz-form">
       <!-- Add Here .. -->
              <!-- Question 1 -->
@@ -254,10 +257,15 @@
     </form>
 
     <div class="score" id="score-container"></div> <!-- Score Display -->
+    <button class="back-button" onclick="goBack()">Back</button>
   </div>
   
-
+  
   <script>
+    // Back button functionality
+    function goBack() {
+      window.history.back();
+    }
     let score = 0; // To keep track of the score
     let totalQuestions = 20; // Update this value if you add more questions
     let answeredQuestions = 0; // To keep track of how many questions have been answered
